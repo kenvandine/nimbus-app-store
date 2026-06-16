@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-16T20:47:50Z",
+  "updated_at": "2026-06-16T21:04:10Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -75,9 +75,9 @@
       ],
       "service_name": "nullclaw",
       "ports": [
-        32123
+        3000
       ],
-      "onboard_cmd": "nullclaw.lemonade --auto",
+      "onboard_cmd": "nullclaw.lemonade --auto --host 0.0.0.0",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/nullclaw/icon.png",
       "version": "2026.5.29",
       "release_page": "https://github.com/kenvandine/nullclaw-snap/releases/tag/2026.5.29",
@@ -203,9 +203,9 @@
       ],
       "service_name": "picoclaw",
       "ports": [
-        18800
+        18790
       ],
-      "onboard_cmd": "picoclaw.lemonade --auto",
+      "onboard_cmd": "picoclaw.lemonade --auto --host 0.0.0.0",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/picoclaw/icon.png",
       "version": "0.2.9",
       "release_page": "https://github.com/kenvandine/picoclaw-snap/releases/tag/0.2.9",
@@ -248,7 +248,7 @@
       "ports": [
         3000
       ],
-      "onboard_cmd": "zeroclaw.lemonade --auto",
+      "onboard_cmd": "zeroclaw.lemonade --auto --host 0.0.0.0",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/zeroclaw/icon.png",
       "version": "0.1.4",
       "release_page": "https://github.com/kenvandine/zeroclaw-snap/releases/tag/0.1.4",
