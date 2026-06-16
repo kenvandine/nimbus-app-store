@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-16T16:45:29Z",
+  "updated_at": "2026-06-16T18:10:30Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -43,6 +43,7 @@
       },
       "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap",
       "service_name": "hermes-agent",
+      "ports": [9119],
       "onboard_cmd": "hermes-agent.lemonade --auto"
     },
     {
@@ -83,6 +84,7 @@
       },
       "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap",
       "service_name": "nullclaw",
+      "ports": [32123],
       "onboard_cmd": "nullclaw.lemonade --auto"
     },
     {
@@ -122,7 +124,8 @@
         }
       },
       "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap",
-      "onboard_cmd": "odysseus.lemonade --auto"
+      "onboard_cmd": "odysseus.lemonade --auto",
+      "ports": [7000]
     },
     {
       "name": "openclaw",
@@ -162,6 +165,7 @@
       },
       "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.6_amd64.snap",
       "service_name": "openclaw-gateway",
+      "ports": [18789],
       "onboard_cmd": "openclaw.lemonade --auto"
     },
     {
@@ -202,6 +206,7 @@
       },
       "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap",
       "service_name": "picoclaw",
+      "ports": [18800],
       "onboard_cmd": "picoclaw.lemonade --auto"
     },
     {
@@ -242,6 +247,7 @@
       },
       "install_command": "sudo snap install --classic --dangerous zeroclaw_0.1.4_amd64.snap",
       "service_name": "zeroclaw",
+      "ports": [3000],
       "onboard_cmd": "zeroclaw.lemonade --auto"
     }
   ]
