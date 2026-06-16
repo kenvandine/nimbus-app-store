@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-16T18:10:30Z",
+  "updated_at": "2026-06-16T19:23:58Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -41,12 +41,7 @@
           "size": 366206976
         }
       },
-      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap",
-      "service_name": "hermes-agent",
-      "ports": [
-        9119
-      ],
-      "onboard_cmd": "hermes-agent.lemonade --auto"
+      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap"
     },
     {
       "name": "nullclaw",
@@ -84,12 +79,7 @@
           "size": 3387392
         }
       },
-      "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap",
-      "service_name": "nullclaw",
-      "ports": [
-        32123
-      ],
-      "onboard_cmd": "nullclaw.lemonade --auto"
+      "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap"
     },
     {
       "name": "odysseus",
@@ -127,11 +117,7 @@
           "size": 126337024
         }
       },
-      "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap",
-      "onboard_cmd": "odysseus.lemonade --auto",
-      "ports": [
-        7000
-      ]
+      "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap"
     },
     {
       "name": "openclaw",
@@ -159,22 +145,17 @@
         "--dangerous"
       ],
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/openclaw/icon.png",
-      "version": "2026.6.6",
-      "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.6",
-      "published_at": "2026-06-16T16:24:49Z",
+      "version": "2026.6.8",
+      "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.8",
+      "published_at": "2026-06-16T17:41:30Z",
       "releases": {
         "amd64": {
-          "filename": "openclaw_2026.6.6_amd64.snap",
-          "download_url": "https://github.com/kenvandine/openclaw-snap/releases/download/2026.6.6/openclaw_2026.6.6_amd64.snap",
-          "size": 580382720
+          "filename": "openclaw_2026.6.8_amd64.snap",
+          "download_url": "https://github.com/kenvandine/openclaw-snap/releases/download/2026.6.8/openclaw_2026.6.8_amd64.snap",
+          "size": 580538368
         }
       },
-      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.6_amd64.snap",
-      "service_name": "openclaw-gateway",
-      "ports": [
-        18789
-      ],
-      "onboard_cmd": "openclaw.lemonade --auto"
+      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.8_amd64.snap"
     },
     {
       "name": "picoclaw",
@@ -212,12 +193,7 @@
           "size": 19857408
         }
       },
-      "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap",
-      "service_name": "picoclaw",
-      "ports": [
-        18800
-      ],
-      "onboard_cmd": "picoclaw.lemonade --auto"
+      "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap"
     },
     {
       "name": "zeroclaw",
@@ -255,12 +231,7 @@
           "size": 51138560
         }
       },
-      "install_command": "sudo snap install --classic --dangerous zeroclaw_0.1.4_amd64.snap",
-      "service_name": "zeroclaw",
-      "ports": [
-        3000
-      ],
-      "onboard_cmd": "zeroclaw.lemonade --auto"
+      "install_command": "sudo snap install --classic --dangerous zeroclaw_0.1.4_amd64.snap"
     }
   ]
 }
