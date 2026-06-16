@@ -1,0 +1,19 @@
+{
+  "name": "nullclaw",
+  "title": "NullClaw",
+  "summary": "Lightweight local-first autonomous AI assistant",
+  "description": "NullClaw is a lightweight, local-first autonomous AI assistant — a static binary that boots in milliseconds with no runtime dependencies beyond libc. It connects to locally-running AI model servers (Lemonade, Ollama) and exposes a gateway for chat channels (Telegram, Discord, Signal, web UI) and agentic tasks such as file operations, code execution, and scheduled jobs.\n\nOn first launch the service automatically detects running Lemonade and Ollama instances and configures them as providers, with Lemonade as the preferred default. No cloud account or API key is required.\n\nRun 'nullclaw.inference-snap' to pick a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) as the primary provider.",
+  "grade": "stable",
+  "confinement": "classic",
+  "license": "MIT",
+  "categories": ["ai", "assistant", "productivity"],
+  "icon": "assets/nullclaw/icon.png",
+  "screenshots": [],
+  "links": {
+    "website": "https://nullclaw.io",
+    "source_code": "https://github.com/kenvandine/nullclaw-snap",
+    "issues": "https://github.com/kenvandine/nullclaw-snap/issues"
+  },
+  "package_repo": "kenvandine/nullclaw-snap",
+  "install_flags": ["--classic", "--dangerous"]
+}

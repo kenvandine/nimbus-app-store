@@ -1,0 +1,19 @@
+{
+  "name": "zeroclaw",
+  "title": "ZeroClaw",
+  "summary": "Zero-config autonomous AI agent",
+  "description": "ZeroClaw is a zero-config autonomous AI agent. It wraps a native binary runtime in a clean Node.js SDK and exposes an HTTP/WebSocket gateway for chat and agentic tasks (http://localhost:3000). Supports optional browser automation and multiple LLM backends via a simple TOML config file.\n\nRun 'zeroclaw.inference-snap' to detect a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) and configure it as ZeroClaw's active provider in one step — fully offline, no API key required.",
+  "grade": "stable",
+  "confinement": "classic",
+  "license": "Apache-2.0",
+  "categories": ["ai", "agent", "automation"],
+  "icon": "assets/zeroclaw/icon.png",
+  "screenshots": [],
+  "links": {
+    "website": "https://clawrun.sh",
+    "source_code": "https://github.com/kenvandine/zeroclaw-snap",
+    "issues": "https://github.com/kenvandine/zeroclaw-snap/issues"
+  },
+  "package_repo": "kenvandine/zeroclaw-snap",
+  "install_flags": ["--classic", "--dangerous"]
+}

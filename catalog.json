@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "store_name": "Nimbus App Store",
+  "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
+  "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
+  "updated_at": "2026-06-16T16:33:20Z",
+  "snaps": [
+    {
+      "name": "hermes-agent",
+      "title": "Hermes AI Agent",
+      "summary": "Autonomous AI agent with 60+ built-in tools and 20+ platform integrations",
+      "description": "Hermes is an autonomous AI agent that runs on your machine or server and becomes more capable over time through persistent memory and auto-generated skills.\n\nIt connects to 20+ messaging platforms (Telegram, Discord, Slack, WhatsApp, Teams, and more) and executes tasks using 60+ built-in tools: web browsing, browser automation, code execution, file operations, scheduled jobs, and more.\n\nCompatible with any OpenAI-compatible LLM \u2014 locally via Lemonade, Ollama, or a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others), or via cloud APIs such as OpenAI and Anthropic.",
+      "grade": "stable",
+      "confinement": "classic",
+      "license": "MIT",
+      "categories": [
+        "ai",
+        "agent",
+        "automation"
+      ],
+      "icon": "assets/hermes-agent/icon.png",
+      "screenshots": [],
+      "links": {
+        "website": "https://hermes-agent.nousresearch.com",
+        "source_code": "https://github.com/kenvandine/hermes-snap",
+        "issues": "https://github.com/kenvandine/hermes-snap/issues"
+      },
+      "package_repo": "kenvandine/hermes-snap",
+      "install_flags": [
+        "--classic",
+        "--dangerous"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/hermes-agent/icon.png",
+      "version": "0.16.0",
+      "release_page": "https://github.com/kenvandine/hermes-snap/releases/tag/0.16.0",
+      "published_at": "2026-06-10T09:42:05Z",
+      "releases": {
+        "amd64": {
+          "filename": "hermes-agent_0.16.0_amd64.snap",
+          "download_url": "https://github.com/kenvandine/hermes-snap/releases/download/0.16.0/hermes-agent_0.16.0_amd64.snap",
+          "size": 366206976
+        }
+      },
+      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap"
+    },
+    {
+      "name": "nullclaw",
+      "title": "NullClaw",
+      "summary": "Lightweight local-first autonomous AI assistant",
+      "description": "NullClaw is a lightweight, local-first autonomous AI assistant \u2014 a static binary that boots in milliseconds with no runtime dependencies beyond libc. It connects to locally-running AI model servers (Lemonade, Ollama) and exposes a gateway for chat channels (Telegram, Discord, Signal, web UI) and agentic tasks such as file operations, code execution, and scheduled jobs.\n\nOn first launch the service automatically detects running Lemonade and Ollama instances and configures them as providers, with Lemonade as the preferred default. No cloud account or API key is required.\n\nRun 'nullclaw.inference-snap' to pick a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) as the primary provider.",
+      "grade": "stable",
+      "confinement": "classic",
+      "license": "MIT",
+      "categories": [
+        "ai",
+        "assistant",
+        "productivity"
+      ],
+      "icon": "assets/nullclaw/icon.png",
+      "screenshots": [],
+      "links": {
+        "website": "https://nullclaw.io",
+        "source_code": "https://github.com/kenvandine/nullclaw-snap",
+        "issues": "https://github.com/kenvandine/nullclaw-snap/issues"
+      },
+      "package_repo": "kenvandine/nullclaw-snap",
+      "install_flags": [
+        "--classic",
+        "--dangerous"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/nullclaw/icon.png",
+      "version": "2026.5.29",
+      "release_page": "https://github.com/kenvandine/nullclaw-snap/releases/tag/2026.5.29",
+      "published_at": "2026-06-10T09:55:37Z",
+      "releases": {
+        "amd64": {
+          "filename": "nullclaw_2026.5.29_amd64.snap",
+          "download_url": "https://github.com/kenvandine/nullclaw-snap/releases/download/2026.5.29/nullclaw_2026.5.29_amd64.snap",
+          "size": 3387392
+        }
+      },
+      "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap"
+    },
+    {
+      "name": "odysseus",
+      "title": "Odysseus",
+      "summary": "Self-hosted AI workspace",
+      "description": "Odysseus is a privacy-focused, self-hosted AI workspace that runs entirely on your own hardware. It provides a full-featured browser UI for chat, document analysis, deep web research, calendar sync, image generation, speech-to-text, email, and more \u2014 connecting to Ollama, LM Studio, OpenAI, Anthropic, and any OpenAI-compatible endpoint.\n\nNothing leaves your machine beyond the LLM API calls you explicitly configure. Your conversations, documents, uploaded files, and personal settings persist across snap updates.\n\nRun 'odysseus.inference-snap' to connect a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) as the inference backend in one step.",
+      "grade": "stable",
+      "confinement": "classic",
+      "license": "AGPL-3.0",
+      "categories": [
+        "ai",
+        "workspace",
+        "productivity"
+      ],
+      "icon": "assets/odysseus/icon.svg",
+      "screenshots": [],
+      "links": {
+        "website": "https://pewdiepie-archdaemon.github.io/odysseus/",
+        "source_code": "https://github.com/kenvandine/odysseus-snap",
+        "issues": "https://github.com/kenvandine/odysseus-snap/issues"
+      },
+      "package_repo": "kenvandine/odysseus-snap",
+      "install_flags": [
+        "--classic",
+        "--dangerous"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/odysseus/icon.svg",
+      "version": "1.0.0",
+      "release_page": "https://github.com/kenvandine/odysseus-snap/releases/tag/1.0.0",
+      "published_at": "2026-06-11T18:14:44Z",
+      "releases": {
+        "amd64": {
+          "filename": "odysseus_1.0.0_amd64.snap",
+          "download_url": "https://github.com/kenvandine/odysseus-snap/releases/download/1.0.0/odysseus_1.0.0_amd64.snap",
+          "size": 126337024
+        }
+      },
+      "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap"
+    },
+    {
+      "name": "openclaw",
+      "title": "OpenClaw",
+      "summary": "Local-first personal AI assistant",
+      "description": "OpenClaw is a local-first AI assistant that runs entirely on your machine. It connects to your chosen AI model and reaches the outside world through chat interfaces (Discord, Telegram, Slack, web UI, and more), performing agentic tasks such as web browsing, file operations, code execution, and scheduled jobs.\n\nUnlike cloud-based AI assistants, OpenClaw keeps your data and conversations local: nothing is sent to a third-party service beyond the API calls you explicitly configure. You choose the model, you control the keys, and your workspace files never leave your machine without your knowledge.\n\nSupports Lemonade, Ollama, and Canonical inference snaps (gemma4, gemma3, deepseek-r1, and others) for fully offline inference \u2014 no API key required.",
+      "grade": "stable",
+      "confinement": "classic",
+      "license": "MIT",
+      "categories": [
+        "ai",
+        "assistant",
+        "productivity"
+      ],
+      "icon": "assets/openclaw/icon.png",
+      "screenshots": [],
+      "links": {
+        "website": "https://openclaw.ai",
+        "source_code": "https://github.com/kenvandine/openclaw-snap",
+        "issues": "https://github.com/kenvandine/openclaw-snap/issues"
+      },
+      "package_repo": "kenvandine/openclaw-snap",
+      "install_flags": [
+        "--classic",
+        "--dangerous"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/openclaw/icon.png",
+      "version": "2026.6.6",
+      "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.6",
+      "published_at": "2026-06-16T16:24:49Z",
+      "releases": {
+        "amd64": {
+          "filename": "openclaw_2026.6.6_amd64.snap",
+          "download_url": "https://github.com/kenvandine/openclaw-snap/releases/download/2026.6.6/openclaw_2026.6.6_amd64.snap",
+          "size": 580382720
+        }
+      },
+      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.6_amd64.snap"
+    },
+    {
+      "name": "picoclaw",
+      "title": "PicoClaw",
+      "summary": "Tiny, fast, local-first personal AI assistant",
+      "description": "PicoClaw is an ultra-lightweight personal AI assistant \u2014 a single static Go binary small enough to run on $10 hardware with under 10 MB of RAM. It connects to any OpenAI-compatible LLM (locally via Lemonade or Ollama, or cloud providers such as OpenAI, Anthropic, Gemini, and 30+ others) and to 19+ messaging platforms (Telegram, Discord, WhatsApp, Matrix, and more), performing agentic tasks with persistent memory and skills.\n\nRun 'picoclaw.lemonade' to detect a running lemonade-server and pick a model from a menu \u2014 fully offline, no API key required. Or run 'picoclaw.inference-snap' to pick a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) as the provider instead.",
+      "grade": "stable",
+      "confinement": "classic",
+      "license": "MIT",
+      "categories": [
+        "ai",
+        "assistant",
+        "productivity"
+      ],
+      "icon": "assets/picoclaw/icon.png",
+      "screenshots": [],
+      "links": {
+        "website": "https://picoclaw.io",
+        "source_code": "https://github.com/kenvandine/picoclaw-snap",
+        "issues": "https://github.com/kenvandine/picoclaw-snap/issues"
+      },
+      "package_repo": "kenvandine/picoclaw-snap",
+      "install_flags": [
+        "--classic",
+        "--dangerous"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/picoclaw/icon.png",
+      "version": "0.2.9",
+      "release_page": "https://github.com/kenvandine/picoclaw-snap/releases/tag/0.2.9",
+      "published_at": "2026-06-11T10:23:27Z",
+      "releases": {
+        "amd64": {
+          "filename": "picoclaw_0.2.9_amd64.snap",
+          "download_url": "https://github.com/kenvandine/picoclaw-snap/releases/download/0.2.9/picoclaw_0.2.9_amd64.snap",
+          "size": 19857408
+        }
+      },
+      "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap"
+    },
+    {
+      "name": "zeroclaw",
+      "title": "ZeroClaw",
+      "summary": "Zero-config autonomous AI agent",
+      "description": "ZeroClaw is a zero-config autonomous AI agent. It wraps a native binary runtime in a clean Node.js SDK and exposes an HTTP/WebSocket gateway for chat and agentic tasks (http://localhost:3000). Supports optional browser automation and multiple LLM backends via a simple TOML config file.\n\nRun 'zeroclaw.inference-snap' to detect a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) and configure it as ZeroClaw's active provider in one step \u2014 fully offline, no API key required.",
+      "grade": "stable",
+      "confinement": "classic",
+      "license": "Apache-2.0",
+      "categories": [
+        "ai",
+        "agent",
+        "automation"
+      ],
+      "icon": "assets/zeroclaw/icon.png",
+      "screenshots": [],
+      "links": {
+        "website": "https://clawrun.sh",
+        "source_code": "https://github.com/kenvandine/zeroclaw-snap",
+        "issues": "https://github.com/kenvandine/zeroclaw-snap/issues"
+      },
+      "package_repo": "kenvandine/zeroclaw-snap",
+      "install_flags": [
+        "--classic",
+        "--dangerous"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/zeroclaw/icon.png",
+      "version": "0.1.4",
+      "release_page": "https://github.com/kenvandine/zeroclaw-snap/releases/tag/0.1.4",
+      "published_at": "2026-06-10T09:40:51Z",
+      "releases": {
+        "amd64": {
+          "filename": "zeroclaw_0.1.4_amd64.snap",
+          "download_url": "https://github.com/kenvandine/zeroclaw-snap/releases/download/0.1.4/zeroclaw_0.1.4_amd64.snap",
+          "size": 51138560
+        }
+      },
+      "install_command": "sudo snap install --classic --dangerous zeroclaw_0.1.4_amd64.snap"
+    }
+  ]
+}

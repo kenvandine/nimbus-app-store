@@ -1,0 +1,19 @@
+{
+  "name": "openclaw",
+  "title": "OpenClaw",
+  "summary": "Local-first personal AI assistant",
+  "description": "OpenClaw is a local-first AI assistant that runs entirely on your machine. It connects to your chosen AI model and reaches the outside world through chat interfaces (Discord, Telegram, Slack, web UI, and more), performing agentic tasks such as web browsing, file operations, code execution, and scheduled jobs.\n\nUnlike cloud-based AI assistants, OpenClaw keeps your data and conversations local: nothing is sent to a third-party service beyond the API calls you explicitly configure. You choose the model, you control the keys, and your workspace files never leave your machine without your knowledge.\n\nSupports Lemonade, Ollama, and Canonical inference snaps (gemma4, gemma3, deepseek-r1, and others) for fully offline inference — no API key required.",
+  "grade": "stable",
+  "confinement": "classic",
+  "license": "MIT",
+  "categories": ["ai", "assistant", "productivity"],
+  "icon": "assets/openclaw/icon.png",
+  "screenshots": [],
+  "links": {
+    "website": "https://openclaw.ai",
+    "source_code": "https://github.com/kenvandine/openclaw-snap",
+    "issues": "https://github.com/kenvandine/openclaw-snap/issues"
+  },
+  "package_repo": "kenvandine/openclaw-snap",
+  "install_flags": ["--classic", "--dangerous"]
+}

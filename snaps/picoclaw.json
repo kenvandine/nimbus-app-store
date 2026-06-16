@@ -1,0 +1,19 @@
+{
+  "name": "picoclaw",
+  "title": "PicoClaw",
+  "summary": "Tiny, fast, local-first personal AI assistant",
+  "description": "PicoClaw is an ultra-lightweight personal AI assistant — a single static Go binary small enough to run on $10 hardware with under 10 MB of RAM. It connects to any OpenAI-compatible LLM (locally via Lemonade or Ollama, or cloud providers such as OpenAI, Anthropic, Gemini, and 30+ others) and to 19+ messaging platforms (Telegram, Discord, WhatsApp, Matrix, and more), performing agentic tasks with persistent memory and skills.\n\nRun 'picoclaw.lemonade' to detect a running lemonade-server and pick a model from a menu — fully offline, no API key required. Or run 'picoclaw.inference-snap' to pick a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) as the provider instead.",
+  "grade": "stable",
+  "confinement": "classic",
+  "license": "MIT",
+  "categories": ["ai", "assistant", "productivity"],
+  "icon": "assets/picoclaw/icon.png",
+  "screenshots": [],
+  "links": {
+    "website": "https://picoclaw.io",
+    "source_code": "https://github.com/kenvandine/picoclaw-snap",
+    "issues": "https://github.com/kenvandine/picoclaw-snap/issues"
+  },
+  "package_repo": "kenvandine/picoclaw-snap",
+  "install_flags": ["--classic", "--dangerous"]
+}

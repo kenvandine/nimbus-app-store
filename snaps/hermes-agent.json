@@ -1,0 +1,19 @@
+{
+  "name": "hermes-agent",
+  "title": "Hermes AI Agent",
+  "summary": "Autonomous AI agent with 60+ built-in tools and 20+ platform integrations",
+  "description": "Hermes is an autonomous AI agent that runs on your machine or server and becomes more capable over time through persistent memory and auto-generated skills.\n\nIt connects to 20+ messaging platforms (Telegram, Discord, Slack, WhatsApp, Teams, and more) and executes tasks using 60+ built-in tools: web browsing, browser automation, code execution, file operations, scheduled jobs, and more.\n\nCompatible with any OpenAI-compatible LLM — locally via Lemonade, Ollama, or a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others), or via cloud APIs such as OpenAI and Anthropic.",
+  "grade": "stable",
+  "confinement": "classic",
+  "license": "MIT",
+  "categories": ["ai", "agent", "automation"],
+  "icon": "assets/hermes-agent/icon.png",
+  "screenshots": [],
+  "links": {
+    "website": "https://hermes-agent.nousresearch.com",
+    "source_code": "https://github.com/kenvandine/hermes-snap",
+    "issues": "https://github.com/kenvandine/hermes-snap/issues"
+  },
+  "package_repo": "kenvandine/hermes-snap",
+  "install_flags": ["--classic", "--dangerous"]
+}

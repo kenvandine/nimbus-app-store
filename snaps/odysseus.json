@@ -1,0 +1,19 @@
+{
+  "name": "odysseus",
+  "title": "Odysseus",
+  "summary": "Self-hosted AI workspace",
+  "description": "Odysseus is a privacy-focused, self-hosted AI workspace that runs entirely on your own hardware. It provides a full-featured browser UI for chat, document analysis, deep web research, calendar sync, image generation, speech-to-text, email, and more — connecting to Ollama, LM Studio, OpenAI, Anthropic, and any OpenAI-compatible endpoint.\n\nNothing leaves your machine beyond the LLM API calls you explicitly configure. Your conversations, documents, uploaded files, and personal settings persist across snap updates.\n\nRun 'odysseus.inference-snap' to connect a Canonical inference snap (gemma4, gemma3, deepseek-r1, and others) as the inference backend in one step.",
+  "grade": "stable",
+  "confinement": "classic",
+  "license": "AGPL-3.0",
+  "categories": ["ai", "workspace", "productivity"],
+  "icon": "assets/odysseus/icon.svg",
+  "screenshots": [],
+  "links": {
+    "website": "https://pewdiepie-archdaemon.github.io/odysseus/",
+    "source_code": "https://github.com/kenvandine/odysseus-snap",
+    "issues": "https://github.com/kenvandine/odysseus-snap/issues"
+  },
+  "package_repo": "kenvandine/odysseus-snap",
+  "install_flags": ["--classic", "--dangerous"]
+}
