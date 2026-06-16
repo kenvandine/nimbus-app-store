@@ -17,6 +17,6 @@
   "package_repo": "kenvandine/picoclaw-snap",
   "install_flags": ["--classic", "--dangerous"],
   "service_name": "picoclaw",
-  "ports": [18800],
-  "onboard_cmd": "picoclaw.lemonade --auto"
+  "ports": [18790],
+  "onboard_cmd": "picoclaw.lemonade --auto --host 0.0.0.0"
 }

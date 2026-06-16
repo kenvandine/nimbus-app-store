@@ -18,5 +18,5 @@
   "install_flags": ["--classic", "--dangerous"],
   "service_name": "zeroclaw",
   "ports": [3000],
-  "onboard_cmd": "zeroclaw.lemonade --auto"
+  "onboard_cmd": "zeroclaw.lemonade --auto --host 0.0.0.0"
 }
