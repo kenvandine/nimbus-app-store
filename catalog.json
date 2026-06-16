@@ -43,7 +43,9 @@
       },
       "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap",
       "service_name": "hermes-agent",
-      "ports": [9119],
+      "ports": [
+        9119
+      ],
       "onboard_cmd": "hermes-agent.lemonade --auto"
     },
     {
@@ -84,7 +86,9 @@
       },
       "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap",
       "service_name": "nullclaw",
-      "ports": [32123],
+      "ports": [
+        32123
+      ],
       "onboard_cmd": "nullclaw.lemonade --auto"
     },
     {
@@ -125,7 +129,9 @@
       },
       "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap",
       "onboard_cmd": "odysseus.lemonade --auto",
-      "ports": [7000]
+      "ports": [
+        7000
+      ]
     },
     {
       "name": "openclaw",
@@ -165,8 +171,10 @@
       },
       "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.6_amd64.snap",
       "service_name": "openclaw-gateway",
-      "ports": [18789],
-      "onboard_cmd": "openclaw.lemonade --auto"
+      "ports": [
+        18789
+      ],
+      "onboard_cmd": "openclaw.lemonade"
     },
     {
       "name": "picoclaw",
@@ -206,7 +214,9 @@
       },
       "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap",
       "service_name": "picoclaw",
-      "ports": [18800],
+      "ports": [
+        18800
+      ],
       "onboard_cmd": "picoclaw.lemonade --auto"
     },
     {
@@ -247,7 +257,9 @@
       },
       "install_command": "sudo snap install --classic --dangerous zeroclaw_0.1.4_amd64.snap",
       "service_name": "zeroclaw",
-      "ports": [3000],
+      "ports": [
+        3000
+      ],
       "onboard_cmd": "zeroclaw.lemonade --auto"
     }
   ]
