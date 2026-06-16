@@ -174,7 +174,7 @@
       "ports": [
         18789
       ],
-      "onboard_cmd": "openclaw.lemonade"
+      "onboard_cmd": "openclaw.lemonade --auto"
     },
     {
       "name": "picoclaw",
