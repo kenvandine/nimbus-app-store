@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-16T19:23:58Z",
+  "updated_at": "2026-06-16T19:28:48Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -30,6 +30,11 @@
         "--classic",
         "--dangerous"
       ],
+      "service_name": "hermes-agent",
+      "ports": [
+        9119
+      ],
+      "onboard_cmd": "hermes-agent.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/hermes-agent/icon.png",
       "version": "0.16.0",
       "release_page": "https://github.com/kenvandine/hermes-snap/releases/tag/0.16.0",
@@ -68,6 +73,11 @@
         "--classic",
         "--dangerous"
       ],
+      "service_name": "nullclaw",
+      "ports": [
+        32123
+      ],
+      "onboard_cmd": "nullclaw.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/nullclaw/icon.png",
       "version": "2026.5.29",
       "release_page": "https://github.com/kenvandine/nullclaw-snap/releases/tag/2026.5.29",
@@ -106,6 +116,10 @@
         "--classic",
         "--dangerous"
       ],
+      "ports": [
+        7000
+      ],
+      "onboard_cmd": "odysseus.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/odysseus/icon.svg",
       "version": "1.0.0",
       "release_page": "https://github.com/kenvandine/odysseus-snap/releases/tag/1.0.0",
@@ -144,6 +158,11 @@
         "--classic",
         "--dangerous"
       ],
+      "service_name": "openclaw-gateway",
+      "ports": [
+        18789
+      ],
+      "onboard_cmd": "openclaw.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/openclaw/icon.png",
       "version": "2026.6.8",
       "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.8",
@@ -182,6 +201,11 @@
         "--classic",
         "--dangerous"
       ],
+      "service_name": "picoclaw",
+      "ports": [
+        18800
+      ],
+      "onboard_cmd": "picoclaw.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/picoclaw/icon.png",
       "version": "0.2.9",
       "release_page": "https://github.com/kenvandine/picoclaw-snap/releases/tag/0.2.9",
@@ -220,6 +244,11 @@
         "--classic",
         "--dangerous"
       ],
+      "service_name": "zeroclaw",
+      "ports": [
+        3000
+      ],
+      "onboard_cmd": "zeroclaw.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/zeroclaw/icon.png",
       "version": "0.1.4",
       "release_page": "https://github.com/kenvandine/zeroclaw-snap/releases/tag/0.1.4",
