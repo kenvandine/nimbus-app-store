@@ -15,5 +15,8 @@
     "issues": "https://github.com/kenvandine/hermes-snap/issues"
   },
   "package_repo": "kenvandine/hermes-snap",
-  "install_flags": ["--classic", "--dangerous"]
+  "install_flags": ["--classic", "--dangerous"],
+  "service_name": "hermes-agent",
+  "ports": [9119],
+  "onboard_cmd": "hermes-agent.lemonade --auto"
 }

@@ -15,5 +15,7 @@
     "issues": "https://github.com/kenvandine/odysseus-snap/issues"
   },
   "package_repo": "kenvandine/odysseus-snap",
-  "install_flags": ["--classic", "--dangerous"]
+  "install_flags": ["--classic", "--dangerous"],
+  "ports": [7000],
+  "onboard_cmd": "odysseus.lemonade --auto"
 }

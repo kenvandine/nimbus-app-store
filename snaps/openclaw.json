@@ -15,5 +15,8 @@
     "issues": "https://github.com/kenvandine/openclaw-snap/issues"
   },
   "package_repo": "kenvandine/openclaw-snap",
-  "install_flags": ["--classic", "--dangerous"]
+  "install_flags": ["--classic", "--dangerous"],
+  "service_name": "openclaw-gateway",
+  "ports": [18789],
+  "onboard_cmd": "openclaw.lemonade --auto"
 }

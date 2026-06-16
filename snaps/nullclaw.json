@@ -15,5 +15,8 @@
     "issues": "https://github.com/kenvandine/nullclaw-snap/issues"
   },
   "package_repo": "kenvandine/nullclaw-snap",
-  "install_flags": ["--classic", "--dangerous"]
+  "install_flags": ["--classic", "--dangerous"],
+  "service_name": "nullclaw",
+  "ports": [32123],
+  "onboard_cmd": "nullclaw.lemonade --auto"
 }

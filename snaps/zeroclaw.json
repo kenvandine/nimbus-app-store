@@ -15,5 +15,8 @@
     "issues": "https://github.com/kenvandine/zeroclaw-snap/issues"
   },
   "package_repo": "kenvandine/zeroclaw-snap",
-  "install_flags": ["--classic", "--dangerous"]
+  "install_flags": ["--classic", "--dangerous"],
+  "service_name": "zeroclaw",
+  "ports": [3000],
+  "onboard_cmd": "zeroclaw.lemonade --auto"
 }
