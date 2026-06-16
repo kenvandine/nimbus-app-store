@@ -41,7 +41,9 @@
           "size": 366206976
         }
       },
-      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap",
+      "service_name": "hermes-agent",
+      "onboard_cmd": "hermes-agent.lemonade --auto"
     },
     {
       "name": "nullclaw",
@@ -79,7 +81,9 @@
           "size": 3387392
         }
       },
-      "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap",
+      "service_name": "nullclaw",
+      "onboard_cmd": "nullclaw.lemonade --auto"
     },
     {
       "name": "odysseus",
@@ -117,7 +121,8 @@
           "size": 126337024
         }
       },
-      "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap",
+      "onboard_cmd": "odysseus.lemonade --auto"
     },
     {
       "name": "openclaw",
@@ -155,7 +160,9 @@
           "size": 580382720
         }
       },
-      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.6_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.6_amd64.snap",
+      "service_name": "openclaw-gateway",
+      "onboard_cmd": "openclaw.lemonade --auto"
     },
     {
       "name": "picoclaw",
@@ -193,7 +200,9 @@
           "size": 19857408
         }
       },
-      "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap",
+      "service_name": "picoclaw",
+      "onboard_cmd": "picoclaw.lemonade --auto"
     },
     {
       "name": "zeroclaw",
@@ -231,7 +240,9 @@
           "size": 51138560
         }
       },
-      "install_command": "sudo snap install --classic --dangerous zeroclaw_0.1.4_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous zeroclaw_0.1.4_amd64.snap",
+      "service_name": "zeroclaw",
+      "onboard_cmd": "zeroclaw.lemonade --auto"
     }
   ]
 }
