@@ -46,7 +46,9 @@
           "size": 386125824
         }
       },
-      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap",
+      "onboard_cmd": ["hermes-agent.lemonade", ["--auto"]],
+      "service_name": "hermes-agent"
     },
     {
       "name": "nullclaw",
