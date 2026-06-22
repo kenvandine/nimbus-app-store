@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-22T12:45:52Z",
+  "updated_at": "2026-06-22T19:13:22Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -36,17 +36,17 @@
       ],
       "onboard_cmd": "hermes-agent.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/hermes-agent/icon.png",
-      "version": "0.16.0",
-      "release_page": "https://github.com/kenvandine/hermes-snap/releases/tag/0.16.0",
-      "published_at": "2026-06-10T09:42:05Z",
+      "version": "0.17.0",
+      "release_page": "https://github.com/kenvandine/hermes-snap/releases/tag/0.17.0",
+      "published_at": "2026-06-22T19:07:00Z",
       "releases": {
         "amd64": {
-          "filename": "hermes-agent_0.16.0_amd64.snap",
-          "download_url": "https://github.com/kenvandine/hermes-snap/releases/download/0.16.0/hermes-agent_0.16.0_amd64.snap",
-          "size": 386121728
+          "filename": "hermes-agent_0.17.0_amd64.snap",
+          "download_url": "https://github.com/kenvandine/hermes-snap/releases/download/0.17.0/hermes-agent_0.17.0_amd64.snap",
+          "size": 394260480
         }
       },
-      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.16.0_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous hermes-agent_0.17.0_amd64.snap"
     },
     {
       "name": "nullclaw",
@@ -121,17 +121,17 @@
       ],
       "onboard_cmd": "odysseus.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/odysseus/icon.svg",
-      "version": "1.0.0",
-      "release_page": "https://github.com/kenvandine/odysseus-snap/releases/tag/1.0.0",
-      "published_at": "2026-06-11T18:14:44Z",
+      "version": "1.0.1",
+      "release_page": "https://github.com/kenvandine/odysseus-snap/releases/tag/1.0.1",
+      "published_at": "2026-06-22T19:05:34Z",
       "releases": {
         "amd64": {
-          "filename": "odysseus_1.0.0_amd64.snap",
-          "download_url": "https://github.com/kenvandine/odysseus-snap/releases/download/1.0.0/odysseus_1.0.0_amd64.snap",
-          "size": 126337024
+          "filename": "odysseus_1.0.1_amd64.snap",
+          "download_url": "https://github.com/kenvandine/odysseus-snap/releases/download/1.0.1/odysseus_1.0.1_amd64.snap",
+          "size": 126988288
         }
       },
-      "install_command": "sudo snap install --classic --dangerous odysseus_1.0.0_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous odysseus_1.0.1_amd64.snap"
     },
     {
       "name": "openclaw",
@@ -164,17 +164,17 @@
       ],
       "onboard_cmd": "openclaw.lemonade --auto",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/openclaw/icon.png",
-      "version": "2026.6.8",
-      "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.8",
-      "published_at": "2026-06-16T17:41:30Z",
+      "version": "2026.6.9",
+      "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.9",
+      "published_at": "2026-06-22T19:08:58Z",
       "releases": {
         "amd64": {
-          "filename": "openclaw_2026.6.8_amd64.snap",
-          "download_url": "https://github.com/kenvandine/openclaw-snap/releases/download/2026.6.8/openclaw_2026.6.8_amd64.snap",
-          "size": 580538368
+          "filename": "openclaw_2026.6.9_amd64.snap",
+          "download_url": "https://github.com/kenvandine/openclaw-snap/releases/download/2026.6.9/openclaw_2026.6.9_amd64.snap",
+          "size": 581103616
         }
       },
-      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.8_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.9_amd64.snap"
     },
     {
       "name": "picoclaw",
