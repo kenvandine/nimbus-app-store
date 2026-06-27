@@ -16,6 +16,7 @@
   },
   "package_repo": "kenvandine/zeroclaw-snap",
   "install_flags": ["--classic", "--dangerous"],
+  "supported": false,
   "service_name": "zeroclaw",
   "ports": [3000],
   "onboard_cmd": "zeroclaw.lemonade --auto --host 0.0.0.0",

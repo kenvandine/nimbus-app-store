@@ -30,6 +30,7 @@
         "--classic",
         "--dangerous"
       ],
+      "supported": false,
       "service_name": "hermes-agent",
       "ports": [
         9119
@@ -74,6 +75,7 @@
         "--classic",
         "--dangerous"
       ],
+      "supported": false,
       "service_name": "nullclaw",
       "ports": [
         3002,
@@ -119,6 +121,7 @@
         "--classic",
         "--dangerous"
       ],
+      "supported": false,
       "service_name": "odysseus",
       "ports": [
         7000
@@ -163,6 +166,7 @@
         "--classic",
         "--dangerous"
       ],
+      "supported": true,
       "service_name": "openclaw-gateway",
       "ports": [
         18789
@@ -207,6 +211,7 @@
         "--classic",
         "--dangerous"
       ],
+      "supported": true,
       "service_name": "picoclaw",
       "ports": [
         18800,
@@ -252,6 +257,7 @@
         "--classic",
         "--dangerous"
       ],
+      "supported": false,
       "service_name": "zeroclaw",
       "ports": [
         3000

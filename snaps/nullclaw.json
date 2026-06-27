@@ -16,6 +16,7 @@
   },
   "package_repo": "kenvandine/nullclaw-snap",
   "install_flags": ["--classic", "--dangerous"],
+  "supported": false,
   "service_name": "nullclaw",
   "ports": [3002, 4173],
   "onboard_cmd": "nullclaw.lemonade --auto --host 0.0.0.0",
