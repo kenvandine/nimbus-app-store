@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-27T15:54:28Z",
+  "updated_at": "2026-06-27T16:23:42Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -44,7 +44,7 @@
         "amd64": {
           "filename": "hermes-agent_0.17.0_amd64.snap",
           "download_url": "https://github.com/kenvandine/hermes-snap/releases/download/0.17.0/hermes-agent_0.17.0_amd64.snap",
-          "size": 394260480
+          "size": 394272768
         }
       },
       "install_command": "sudo snap install --classic --dangerous hermes-agent_0.17.0_amd64.snap"
@@ -76,7 +76,8 @@
       ],
       "service_name": "nullclaw",
       "ports": [
-        3002
+        3002,
+        4173
       ],
       "onboard_cmd": "nullclaw.lemonade --auto --host 0.0.0.0",
       "post_install_script": "scripts/nullclaw-post-install.sh",
@@ -88,7 +89,7 @@
         "amd64": {
           "filename": "nullclaw_2026.5.29_amd64.snap",
           "download_url": "https://github.com/kenvandine/nullclaw-snap/releases/download/2026.5.29/nullclaw_2026.5.29_amd64.snap",
-          "size": 3387392
+          "size": 43986944
         }
       },
       "install_command": "sudo snap install --classic --dangerous nullclaw_2026.5.29_amd64.snap"
