@@ -16,6 +16,8 @@
   },
   "package_repo": "kenvandine/odysseus-snap",
   "install_flags": ["--classic", "--dangerous"],
+  "service_name": "odysseus",
   "ports": [7000],
-  "onboard_cmd": "odysseus.lemonade --auto"
+  "onboard_cmd": "odysseus.lemonade --auto",
+  "post_install_script": "scripts/odysseus-post-install.sh"
 }

@@ -18,5 +18,6 @@
   "install_flags": ["--classic", "--dangerous"],
   "service_name": "hermes-agent",
   "ports": [9119],
-  "onboard_cmd": "hermes-agent.lemonade --auto"
+  "onboard_cmd": "hermes-agent.lemonade --auto",
+  "post_install_script": "scripts/hermes-agent-post-install.sh"
 }

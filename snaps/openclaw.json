@@ -18,5 +18,6 @@
   "install_flags": ["--classic", "--dangerous"],
   "service_name": "openclaw-gateway",
   "ports": [18789],
-  "onboard_cmd": "openclaw.lemonade --auto"
+  "onboard_cmd": "openclaw.lemonade --auto",
+  "post_install_script": "scripts/openclaw-post-install.sh"
 }
