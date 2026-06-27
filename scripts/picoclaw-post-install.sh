@@ -94,4 +94,17 @@ fi
 
 log "Restarting PicoClaw service..."
 systemctl --user restart picoclaw >/dev/null 2>&1 || true
+
+# Wait for the PicoClaw chat service to be ready, then restart the gateway
+# so it can connect to the now-running chat service.
+log "Waiting for PicoClaw chat service to be ready..."
+for i in {1..30}; do
+    if curl -sf --connect-timeout 2 "http://127.0.0.1:18790/" >/dev/null 2>&1; then
+        log "PicoClaw chat service is ready."
+        break
+    fi
+    sleep 2
+done
+log "Restarting PicoClaw gateway..."
+systemctl --user restart picoclaw-gateway >/dev/null 2>&1 || true
 log "PicoClaw post-install completed."
