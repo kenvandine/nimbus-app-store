@@ -98,4 +98,7 @@ NULLCLAW_CFG
 log "Restarting NullClaw service..."
 systemctl --user enable --now nullclaw >/dev/null 2>&1 || true
 systemctl --user restart nullclaw >/dev/null 2>&1 || true
+log "Starting NullClaw UI service..."
+systemctl --user enable --now nullclaw-ui >/dev/null 2>&1 || true
+systemctl --user restart nullclaw-ui >/dev/null 2>&1 || true
 log "NullClaw post-install completed."
