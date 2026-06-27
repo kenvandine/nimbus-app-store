@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-27T18:24:06Z",
+  "updated_at": "2026-06-27T18:48:24Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -174,17 +174,17 @@
       "onboard_cmd": "openclaw.lemonade --auto",
       "post_install_script": "scripts/openclaw-post-install.sh",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/openclaw/icon.png",
-      "version": "2026.6.9",
-      "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.9",
-      "published_at": "2026-06-22T19:08:58Z",
+      "version": "2026.6.10",
+      "release_page": "https://github.com/kenvandine/openclaw-snap/releases/tag/2026.6.10",
+      "published_at": "2026-06-27T18:41:03Z",
       "releases": {
         "amd64": {
-          "filename": "openclaw_2026.6.9_amd64.snap",
-          "download_url": "https://github.com/kenvandine/openclaw-snap/releases/download/2026.6.9/openclaw_2026.6.9_amd64.snap",
-          "size": 581103616
+          "filename": "openclaw_2026.6.10_amd64.snap",
+          "download_url": "https://github.com/kenvandine/openclaw-snap/releases/download/2026.6.10/openclaw_2026.6.10_amd64.snap",
+          "size": 581115904
         }
       },
-      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.9_amd64.snap"
+      "install_command": "sudo snap install --classic --dangerous openclaw_2026.6.10_amd64.snap"
     },
     {
       "name": "picoclaw",
