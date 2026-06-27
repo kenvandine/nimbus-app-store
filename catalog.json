@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-27T16:24:00Z",
+  "updated_at": "2026-06-27T16:30:37Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -76,8 +76,8 @@
       ],
       "service_name": "nullclaw",
       "ports": [
-        4173,
-        3002
+        3002,
+        4173
       ],
       "onboard_cmd": "nullclaw.lemonade --auto --host 0.0.0.0",
       "post_install_script": "scripts/nullclaw-post-install.sh",
