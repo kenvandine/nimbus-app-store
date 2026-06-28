@@ -3,6 +3,13 @@
 
 set -e
 
+# Ensure systemd user session variables are defined (required for systemctl --user commands)
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+    uid=$(id -u)
+    export XDG_RUNTIME_DIR="/run/user/$uid"
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"
+fi
+
 # Run under the nimbus user session
 # Probes Lemonade, sets up the model, and configures the gateway host to bind to 0.0.0.0.
 

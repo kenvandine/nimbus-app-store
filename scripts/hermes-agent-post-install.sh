@@ -1,6 +1,13 @@
 #!/bin/sh
 set -e
 
+# Ensure systemd user session variables are defined (required for systemctl --user commands)
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+    uid=$(id -u)
+    export XDG_RUNTIME_DIR="/run/user/$uid"
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"
+fi
+
 # Probe lemonade models to find what's loaded
 LEMONADE_API="http://127.0.0.1:13305/api/v1"
 CURL="/snap/hermes-agent/current/usr/bin/curl"
