@@ -39,6 +39,10 @@ with open(CONFIG_PATH) as f:
 gw = cfg.setdefault('gateway', {})
 gw['bind'] = 'lan'
 gw.setdefault('controlUi', {})['allowInsecureAuth'] = True
+auth = gw.setdefault('auth', {})
+if not auth.get('token'):
+    import secrets
+    auth['token'] = secrets.token_hex(16)
 
 # --- pick best Lemonade model ---
 try:
