@@ -92,11 +92,20 @@ with open(p, 'w') as f:
 " "$cfg" || true
 fi
 
+# Inject ExecStop to clean up orphaned processes in the transient snap scope
+svc_file="$HOME/.config/systemd/user/picoclaw.service"
+if [ -f "$svc_file" ]; then
+    if ! grep -q "ExecStop=" "$svc_file"; then
+        log "Injecting ExecStop to picoclaw.service"
+        sed -i '/ExecStart=/a ExecStop=/usr/bin/pkill -f picoclaw' "$svc_file"
+        systemctl --user daemon-reload >/dev/null 2>&1 || true
+    fi
+fi
+
 log "Restarting PicoClaw service..."
 systemctl --user restart picoclaw >/dev/null 2>&1 || true
 
-# Wait for the PicoClaw chat service to be ready, then restart the gateway
-# so it can connect to the now-running chat service.
+# Wait for the PicoClaw chat service to be ready.
 log "Waiting for PicoClaw chat service to be ready..."
 for i in {1..30}; do
     if curl -sf --connect-timeout 2 "http://127.0.0.1:18790/" >/dev/null 2>&1; then
@@ -105,6 +114,4 @@ for i in {1..30}; do
     fi
     sleep 2
 done
-log "Restarting PicoClaw gateway..."
-systemctl --user restart picoclaw-gateway >/dev/null 2>&1 || true
 log "PicoClaw post-install completed."
