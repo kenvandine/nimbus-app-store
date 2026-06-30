@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-06-29T11:54:57Z",
+  "updated_at": "2026-06-30T10:29:13Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -227,7 +227,7 @@
         "amd64": {
           "filename": "picoclaw_0.2.9_amd64.snap",
           "download_url": "https://github.com/kenvandine/picoclaw-snap/releases/download/0.2.9/picoclaw_0.2.9_amd64.snap",
-          "size": 19857408
+          "size": 19861504
         }
       },
       "install_command": "sudo snap install --classic --dangerous picoclaw_0.2.9_amd64.snap"
