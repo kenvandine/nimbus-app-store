@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants available for side-loading before they are published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-07-07T10:21:36Z",
+  "updated_at": "2026-07-08T09:22:45Z",
   "snaps": [
     {
       "name": "hermes-agent",
