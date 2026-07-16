@@ -60,7 +60,17 @@ EOF
     echo "$best_id"
 }
 
-SELECTED=$(pick_best)
+# Prefer Nimbus's router collection if it's registered — it already encodes
+# the local/cloud routing policy, so claw apps should address it by name
+# rather than picking a specific backend model themselves.
+SELECTED=""
+if echo "$MODELS" | grep -qi '^NimbusModel$'; then
+    SELECTED="user.NimbusModel"
+fi
+
+if [ -z "$SELECTED" ]; then
+    SELECTED=$(pick_best)
+fi
 if [ -z "$SELECTED" ]; then
     SELECTED=$(echo "$MODELS" | head -n 1)
 fi

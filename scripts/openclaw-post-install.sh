@@ -51,14 +51,22 @@ try:
     ids = [m['id'] for m in data.get('data', [])]
     non_builtin = [i for i in ids if not i.startswith('builtin.')]
 
+    # Prefer Nimbus's router collection if it's registered — it already
+    # encodes the local/cloud routing policy, so claw apps should address it
+    # by name rather than picking a specific backend model themselves.
+    has_router = any(i.lower() == 'nimbusmodel' for i in non_builtin)
+
     def score(i):
         l = i.lower()
         if 'qwen' in l: return 2
         if 'glm'  in l: return 1
         return 0
 
-    ranked = sorted(non_builtin, key=lambda i: (-score(i), i))
-    best_id = ranked[0] if ranked else None
+    if has_router:
+        best_id = 'user.NimbusModel'
+    else:
+        ranked = sorted(non_builtin, key=lambda i: (-score(i), i))
+        best_id = ranked[0] if ranked else None
 except Exception as e:
     print(f'  could not probe Lemonade: {e}')
     best_id = None

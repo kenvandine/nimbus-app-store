@@ -60,7 +60,16 @@ for m in $ALL_MODELS; do
 "
 done
 MODELS=$(printf '%s' "$MODELS" | sed '/^$/d')
-SELECTED=$(printf '%s\n' "$MODELS" | pick_best)
+
+# Prefer Nimbus's router collection if it's registered — it already encodes
+# the local/cloud routing policy, so claw apps should address it by name
+# rather than picking a specific backend model themselves.
+SELECTED=""
+if printf '%s\n' "$MODELS" | grep -qi '^NimbusModel$'; then
+    SELECTED="user.NimbusModel"
+fi
+
+[ -z "$SELECTED" ] && SELECTED=$(printf '%s\n' "$MODELS" | pick_best)
 [ -z "$SELECTED" ] && SELECTED=$(printf '%s\n' "$MODELS" | head -1)
 
 # Fallback model ID if no models are detected
