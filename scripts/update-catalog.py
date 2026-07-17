@@ -47,11 +47,6 @@ def get_release_info(package_repo, snap_name):
                 "size": snap_asset.get("size"),
             }
         },
-        "install_command": (
-            "sudo snap install "
-            + " ".join(["--classic", "--dangerous"])
-            + f" {snap_asset['name']}"
-        ),
     }
 
 
@@ -68,6 +63,11 @@ def main():
 
         snap_name = snap["name"]
         package_repo = snap.get("package_repo")
+        # A snap with a "channel" is installed from the Snap Store on that
+        # channel; one without is sideloaded from its GitHub release asset
+        # (the legacy --dangerous path, kept for snaps not yet published).
+        channel = snap.get("channel")
+        flags = snap.get("install_flags", ["--classic"])
 
         # Resolve icon URL from local path
         icon_path = snap.get("icon", "")
@@ -78,10 +78,29 @@ def main():
             release_info = get_release_info(package_repo, snap_name)
             if release_info:
                 snap.update(release_info)
+            elif channel:
+                # Store snaps carry their version in the store, not a GitHub
+                # release, so a missing release asset is not fatal here.
+                print(f"NOTE: no GitHub release for store snap {snap_name}; "
+                      f"version will come from the store", file=sys.stderr)
+                snap.setdefault("version", None)
             else:
                 errors.append(f"no release found for {snap_name} ({package_repo})")
                 snap["version"] = None
                 snap["releases"] = {}
+
+        if channel:
+            # Store snaps are installed by name from a channel — the GitHub
+            # release download link is never used, so drop it from the catalog.
+            snap.pop("releases", None)
+            snap["install_command"] = (
+                f"sudo snap install {' '.join(flags)} --channel={channel} {snap_name}"
+            )
+        elif snap.get("releases", {}).get("amd64"):
+            filename = snap["releases"]["amd64"]["filename"]
+            snap["install_command"] = (
+                f"sudo snap install {' '.join(flags)} {filename}"
+            )
 
         snaps.append(snap)
 
@@ -90,7 +109,7 @@ def main():
         "store_name": "Nimbus App Store",
         "store_description": (
             "Snap packages for the Nimbus appliance — AI agents and assistants "
-            "available for side-loading before they are published to the Snap Store."
+            "published to the Snap Store."
         ),
         "base_url": STORE_BASE_URL,
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),

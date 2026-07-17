@@ -15,7 +15,8 @@
     "issues": "https://github.com/kenvandine/odysseus-snap/issues"
   },
   "package_repo": "kenvandine/odysseus-snap",
-  "install_flags": ["--classic", "--dangerous"],
+  "install_flags": ["--classic"],
+  "channel": "edge",
   "supported": false,
   "service_name": "odysseus",
   "ports": [7000],

@@ -15,7 +15,8 @@
     "issues": "https://github.com/kenvandine/nullclaw-snap/issues"
   },
   "package_repo": "kenvandine/nullclaw-snap",
-  "install_flags": ["--classic", "--dangerous"],
+  "install_flags": ["--classic"],
+  "channel": "edge",
   "supported": false,
   "service_name": "nullclaw",
   "ports": [3002, 4173],

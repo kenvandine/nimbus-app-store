@@ -15,7 +15,8 @@
     "issues": "https://github.com/kenvandine/picoclaw-snap/issues"
   },
   "package_repo": "kenvandine/picoclaw-snap",
-  "install_flags": ["--classic", "--dangerous"],
+  "install_flags": ["--classic"],
+  "channel": "stable",
   "supported": true,
   "service_name": "picoclaw",
   "ports": [18800, 18790],
