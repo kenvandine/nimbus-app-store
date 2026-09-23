@@ -3,7 +3,7 @@
   "store_name": "Nimbus App Store",
   "store_description": "Snap packages for the Nimbus appliance \u2014 AI agents and assistants published to the Snap Store.",
   "base_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main",
-  "updated_at": "2026-09-22T12:16:52Z",
+  "updated_at": "2026-09-23T12:29:40Z",
   "snaps": [
     {
       "name": "hermes-agent",
@@ -38,9 +38,9 @@
       "onboard_cmd": "hermes-agent.lemonade --auto",
       "post_install_script": "scripts/hermes-agent-post-install.sh",
       "icon_url": "https://raw.githubusercontent.com/kenvandine/nimbus-app-store/main/assets/hermes-agent/icon.png",
-      "version": "0.17.0",
-      "release_page": "https://github.com/kenvandine/hermes-snap/releases/tag/0.17.0",
-      "published_at": "2026-06-22T19:07:00Z",
+      "version": "0.19.0",
+      "release_page": "https://github.com/kenvandine/hermes-snap/releases/tag/0.19.0",
+      "published_at": "2026-09-22T20:56:55Z",
       "install_command": "sudo snap install --classic --channel=edge hermes-agent"
     },
     {
