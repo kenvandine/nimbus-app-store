@@ -3,11 +3,15 @@
 
 set -e
 
-# Runs under the nimbus user session
+# Runs as the user that owns the snap's user services.
 # Installs systemd service, waits for Lemonade, writes config, and starts service on port 3000.
 
-export XDG_RUNTIME_DIR=/run/user/1001
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+# Ensure systemd user session variables are defined (required for systemctl --user commands)
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+    uid=$(id -u)
+    export XDG_RUNTIME_DIR="/run/user/$uid"
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"
+fi
 
 LEMONADE_API="http://127.0.0.1:13305/api/v1"
 CONFIG_DIR="$HOME/.zeroclaw"
