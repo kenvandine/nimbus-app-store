@@ -10,7 +10,7 @@ if [ -z "$XDG_RUNTIME_DIR" ]; then
     export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"
 fi
 
-# Run under the nimbus user session
+# Runs as the user that owns the snap's user services.
 # Probes Lemonade, sets up the model, and configures the gateway host to bind to 0.0.0.0.
 
 LEMONADE_API="http://127.0.0.1:13305/api/v1"

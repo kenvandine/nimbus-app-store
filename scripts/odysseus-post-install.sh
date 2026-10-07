@@ -3,11 +3,15 @@
 
 set -e
 
-# Runs under the nimbus user session
+# Runs as the user that owns the snap's user services.
 # Installs systemd service unit, configures env with OLLAMA_BASE_URL, and starts service on port 7000.
 
-export XDG_RUNTIME_DIR=/run/user/1001
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+# Ensure systemd user session variables are defined (required for systemctl --user commands)
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+    uid=$(id -u)
+    export XDG_RUNTIME_DIR="/run/user/$uid"
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"
+fi
 
 ENV_FILE="$HOME/snap/odysseus/common/.env"
 UNIT_DIR="$HOME/.config/systemd/user"
@@ -29,9 +33,9 @@ After=network.target
 ExecStart=/snap/bin/odysseus
 Restart=on-failure
 RestartSec=10s
-Environment=HOME=/home/nimbus
-Environment=XDG_RUNTIME_DIR=/run/user/1001
-Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+Environment=HOME=%h
+Environment=XDG_RUNTIME_DIR=%t
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=%t/bus
 
 [Install]
 WantedBy=default.target

@@ -1,10 +1,14 @@
 #!/bin/bash
 set -e
 
-export XDG_RUNTIME_DIR=/run/user/1001
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+# Ensure systemd user session variables are defined (required for systemctl --user commands)
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+    uid=$(id -u)
+    export XDG_RUNTIME_DIR="/run/user/$uid"
+    export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$uid/bus"
+fi
 
-CONFIG="/home/nimbus/.openclaw/openclaw.json"
+export CONFIG="$HOME/.openclaw/openclaw.json"
 LEMONADE_API="http://127.0.0.1:13305/api/v1"
 
 log() { echo "OpenClaw Post-Install: $1"; }
@@ -27,10 +31,10 @@ log "Configuring Lemonade provider..."
 if [ -f "$CONFIG" ]; then
   log "Patching config (gateway + model)..."
   python3 << 'PYEOF'
-import json, urllib.request
+import json, os, urllib.request
 
 LEMONADE_API = 'http://127.0.0.1:13305/api/v1'
-CONFIG_PATH   = '/home/nimbus/.openclaw/openclaw.json'
+CONFIG_PATH   = os.environ['CONFIG']
 
 with open(CONFIG_PATH) as f:
     cfg = json.load(f)
